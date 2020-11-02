@@ -1,0 +1,10 @@
+#library {
+    display: flex;
+}
+#bookHolder {
+    margin:2px;
+}
+
+#addBook {
+    background: lightgrey;
+}
