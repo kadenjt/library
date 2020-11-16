@@ -25,7 +25,6 @@ function updateBookList() {
         book.createBookCard();
     }
     updateListeners();
-    console.log("here")
     localStorage.setItem("library", JSON.stringify(myLibrary));
 }
 
@@ -33,7 +32,6 @@ Book.prototype.createBookCard = function () {
     const bookHolder = document.createElement("div");
     bookHolder.id = "bookHolder"
     bookHolder.setAttribute("data-libLocation", myLibrary.indexOf(this))
-    bookHolder.style.backgroundColor = "grey";
     const bookElement = document.createElement("div");
     //title
     const title = document.createElement("h2")
@@ -121,7 +119,6 @@ if (!localStorage.getItem('library')) {
     addToLibrary("The Power of Habit", "Charles Duhigg", 371, true);
     addToLibrary("Extreme Ownership", "Jocko Willink and Leif Babin", 384, false);
 } else {
-    console.log("data in storage")
     let storedLibrary = JSON.parse(localStorage.getItem("library") || "[]");
     storedLibrary.forEach(book => {
         addToLibrary(book.title, book.author, book.pages, book.read);

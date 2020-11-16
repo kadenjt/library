@@ -16,7 +16,6 @@ class Book {
         const bookHolder = document.createElement("div");
         bookHolder.id = "bookHolder"
         bookHolder.setAttribute("data-libLocation", myLibrary.indexOf(this))
-        bookHolder.style.backgroundColor = "grey";
         const bookElement = document.createElement("div");
         //title
         const title = document.createElement("h2")
@@ -70,7 +69,6 @@ class Library {
         }
     }
     toggleInputDisplay() {
-        console.log("toggle")
         const inputSection = document.getElementById("addBook");
         if (inputSection.style.display === "none") {
             inputSection.style.display = "block";
